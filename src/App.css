@@ -99,6 +99,7 @@ body {
 .todo-text {
   flex-grow: 1; 
   margin-right: 10px;
+}
 
 .input-form {
   width: 100%;
