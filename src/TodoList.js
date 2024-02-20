@@ -36,6 +36,8 @@ function TodoList() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
+      <br />
+      <br />
       <button className="bn30" onClick={addTodo}>
         <span className="bn30span">Button</span>
       </button>
