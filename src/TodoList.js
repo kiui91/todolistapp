@@ -50,7 +50,11 @@ function TodoList() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button className="bn30" onClick={addTodo}>Add Todo</button>
+      <br />
+      <br />
+      <button className="bn30" onClick={addTodo}>
+        button
+      </button>
       <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
         {todos.map((todo) => (
           <li key={todo.id} className="todo-item">
@@ -80,4 +84,3 @@ function TodoList() {
 }
 
 export default TodoList;
-
