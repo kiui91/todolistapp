@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <TodoList /> // ToDoリストの管理と表示を担当
+      <TodoList /> 
     </div>
   );
 }
