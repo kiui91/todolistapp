@@ -75,7 +75,7 @@ body {
 }
 
 .todo-list ul {
-  list-style-type: none;
+  list-style-type: none; 
   padding: 0;
   margin: 0;
 }
@@ -102,13 +102,13 @@ body {
 }
 
 .input-form {
-  width: 100%; 
-  height: 40px; 
-  padding: 8px 12px; 
-  font-size: 16px; 
-  border: 1px solid #ccc; 
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 
@@ -160,6 +160,7 @@ body {
 .bn30:hover .text {
   background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
 }
+
 
 .button-30 {
   align-items: center;

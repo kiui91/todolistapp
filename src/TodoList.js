@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // TodoList.js
 function TodoList() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+
+  // ローカルストレージからToDoリストを読み込む
+  useEffect(() => {
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+  }, []);
+
+  // ToDoリストの状態が更新されたらローカルストレージに保存
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = () => {
     const newTodo = {
@@ -27,6 +40,7 @@ function TodoList() {
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
+
   return (
     <div>
       <h1>ToDoList</h1>
@@ -39,7 +53,7 @@ function TodoList() {
       <br />
       <br />
       <button className="bn30" onClick={addTodo}>
-        <span className="bn30span">Button</span>
+        button
       </button>
       <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
         {todos.map((todo) => (
